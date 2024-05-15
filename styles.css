@@ -23,6 +23,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
+  width: 250px;
 }
 
 /* left container */
@@ -36,7 +37,7 @@ textarea {
 .logo-container {
   display: flex;
   height: 15%;
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   font-size: 5rem;
   color: white;
   justify-content: center;
@@ -59,17 +60,83 @@ textarea {
   gap: 50px;
   height: 100%;
   flex: 2;
+  background-color: rgba(54, 194, 227, 0.10);
 }
 
 .right-container > .info {
-  outline: 2px solid green;
+  padding: 20px 40px;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-form {
-  outline: 2px solid cyan;
+.right-container form {
+  padding: 20px 40px;
+  background-color: white;
 }
 
-label {
+form > div {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+label, .submit-container {
   display: block;
 }
+
+form > h2, .submit-container button {
+  margin-bottom: 20px;
+}
+
+/* form styling */
+form label {
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  color: rgb(94, 94, 94);
+}
+
+form input {
+  font-size: 1rem;
+  padding: 4px;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 5px;
+
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid rgb(12, 12, 255);
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+.submit-container button {
+  width: 200px;
+  padding: 7px;
+  background-color: #e35736;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px #ccc, -2px -2px 3px #ccc;
+}
+
+.submit-container button:hover {
+  background-color: #e44623;
+  cursor: pointer;
+}
+
+/* .submit-container button:active {
+  background-color: #18834c;
+} */
+
+.submit-container button:active {
+  color: #e35736;
+  background-color: white;
+}
+
+form input:invalid {
+  border: 1px solid red;
+}
+
 
