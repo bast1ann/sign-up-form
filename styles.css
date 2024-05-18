@@ -49,7 +49,7 @@ textarea {
 .logo-container {
   display: flex;
   height: 15%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   font-size: 5rem;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ textarea {
   width: 100%;
   bottom: 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* right container */
