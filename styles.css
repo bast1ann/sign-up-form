@@ -84,8 +84,8 @@ label, .submit-container {
   display: block;
 }
 
-form > h2, .submit-container button {
-  margin-bottom: 20px;
+.submit-container button {
+  margin-bottom: 5px;
 }
 
 /* form styling */
@@ -96,7 +96,7 @@ form label {
   color: rgb(94, 94, 94);
 }
 
-form input {
+form input, form input:required {
   font-size: 1rem;
   padding: 4px;
   border: 1px solid rgb(167, 167, 167);
@@ -135,8 +135,12 @@ form input:focus {
   background-color: white;
 }
 
-form input:invalid {
+form input[type="password"]:invalid {
   border: 1px solid red;
 }
 
+form p {
+  color: rgb(94, 94, 94);
+  margin-bottom: 20px;
+}
 
