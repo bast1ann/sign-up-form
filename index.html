@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
@@ -40,7 +41,8 @@
         </div>
         <div>
           <label for="password">PASSWORD<span aria-label="required">*</span></label>
-          <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).*" maxlength="30" minlength="8" required>
+          <input type="password" id="password" name="password" class="valid" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).*" maxlength="30" minlength="8" required>
+          <span></span>
         </div>
         <div>
           <label for="confirm-password">CONFIRM PASSWORD<span aria-label="required">*</span></label>

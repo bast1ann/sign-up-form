@@ -175,3 +175,19 @@ form p {
   text-decoration: none;
   font-weight: bold;
 }
+
+input#password + span {
+  position: relative;
+  display: block;
+}
+
+input#password.invalid + span::before {
+  position: absolute;
+  font-size: 0.7rem;
+  color: red;
+  content: "Passwords do not match";
+  padding: 5px 10px;
+  bottom: -25px;
+  left: -5px;
+}
+
