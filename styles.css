@@ -91,7 +91,7 @@ textarea {
 }
 
 .right-container form {
-  padding: 20px 40px;
+  padding: 40px 40px;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 -2px 10px rgba(0, 0, 0, 0.15);
 }
@@ -173,6 +173,7 @@ form p {
 }
 
 input#confirm-password + span,
+input#password + span,
 input#phone + span,
 input#email + span {
   position: relative;
@@ -180,6 +181,7 @@ input#email + span {
 }
 
 input#confirm-password.invalid + span::before,
+input#password + span::before,
 input#phone + span::before,
 input#email + span::before {
   position: absolute;
@@ -192,6 +194,12 @@ input#email + span::before {
 input#confirm-password.invalid + span::before {
   color: red;
   content: "Passwords do not match";
+}
+
+input#password + span::before {
+  color: rgb(94, 94, 94);
+  bottom: -40px;
+  content: "Must contain at least 8 characters, 1 uppercase letter, 1 lowercase and 1 digit.";
 }
 
 input#phone + span::before {
