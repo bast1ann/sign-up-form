@@ -98,7 +98,7 @@ textarea {
 
 form > div {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-right: 60px;
 }
 
@@ -148,10 +148,6 @@ form input:focus {
   cursor: pointer;
 }
 
-/* .submit-container button:active {
-  background-color: #18834c;
-} */
-
 .submit-container {
   padding: 20px 40px;
 }
@@ -176,28 +172,35 @@ form p {
   font-weight: bold;
 }
 
-input#password + span, input#phone + span {
+input#password + span,
+input#phone + span,
+input#email + span {
   position: relative;
   display: block;
 }
 
-input#password.invalid + span::before {
+input#password.invalid + span::before,
+input#phone + span::before,
+input#email + span::before {
   position: absolute;
   font-size: 0.7rem;
+  padding: 5px 10px;
+  bottom: -23px;
+  left: -8px;
+}
+
+input#password.invalid + span::before {
   color: red;
   content: "Passwords do not match";
-  padding: 5px 10px;
-  bottom: -25px;
-  left: -5px;
 }
 
 input#phone + span::before {
-  position: absolute;
-  font-size: 0.7rem;
   color: rgb(94, 94, 94);
   content: "(Ex: 12345678912)";
-  padding: 5px 10px;
-  bottom: -25px;
-  left: -5px;
+}
+
+input#email + span::before {
+  color: rgb(94, 94, 94);
+  content: "(Ex: username@domain.com)";
 }
 
