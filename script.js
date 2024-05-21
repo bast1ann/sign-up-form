@@ -4,8 +4,8 @@ const passwordTwo = document.querySelector("#confirm-password");
 
 passwords.forEach( (item) => item.addEventListener("keyup", function() {
   passwordsMatch(passwordOne, passwordTwo) ? 
-  passwordOne.className = "valid" : 
-  passwordOne.className = "invalid";
+  passwordTwo.className = "valid" :
+  passwordTwo.className = "invalid";
 }) );
 
 function passwordsMatch(pass1, pass2) {

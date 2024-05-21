@@ -172,14 +172,14 @@ form p {
   font-weight: bold;
 }
 
-input#password + span,
+input#confirm-password + span,
 input#phone + span,
 input#email + span {
   position: relative;
   display: block;
 }
 
-input#password.invalid + span::before,
+input#confirm-password.invalid + span::before,
 input#phone + span::before,
 input#email + span::before {
   position: absolute;
@@ -189,7 +189,7 @@ input#email + span::before {
   left: -8px;
 }
 
-input#password.invalid + span::before {
+input#confirm-password.invalid + span::before {
   color: red;
   content: "Passwords do not match";
 }
