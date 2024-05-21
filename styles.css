@@ -10,6 +10,7 @@ body {
   line-height: 1.5;
   display: flex;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-width: 730px;
 }
 
 img, picture, video, canvas, svg {
@@ -209,4 +210,36 @@ input#phone + span::before {
 input#email + span::before {
   color: rgb(94, 94, 94);
   content: "(Ex: username@domain.com)";
+}
+
+@media (width < 1520px) {
+  body {
+    margin: 0;
+  }
+  .right-container {
+    --padding-right-container: 40px;
+  }
+}
+
+@media (width < 1190px) {
+  body {
+    flex-direction: column;
+  }
+  .left-container {
+    flex: 2;
+  }
+  .logo-container {
+    top: 0;
+    height: 80%;
+  }
+  .img-credits {
+    height: 20%;
+  }
+  .right-container {
+    flex: 5;
+  }
+  .submit-container,
+  .right-container .info {
+    margin: 0 auto;
+  }
 }
