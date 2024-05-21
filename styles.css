@@ -94,6 +94,10 @@ textarea {
   font-size: 1.3rem;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .right-container form {
   padding: var(--padding-right-container);
   background-color: white;
