@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100%;
+  margin: 0 calc( (100vw - 1520px) / 2) 0;
   height: 100vh;
   line-height: 1.5;
   display: flex;
@@ -38,11 +38,12 @@ textarea {
 .left-container {
   height: 100%;
   background: no-repeat center/cover url("./img/background-img.jpg");
-  flex: 1;
+  flex: 2;
   position: relative;
 }
 
-.left-container, .left-container a {
+.left-container,
+.left-container a {
   color: white;
 }
 
@@ -80,18 +81,20 @@ textarea {
   justify-content: center;
   gap: 20px;
   height: 100%;
-  flex: 2;
-  background-color: rgba(22, 84, 45, 0.4);
+  flex: 3;
+  background-color: rgba(22, 84, 45, 0.15);
+
+  --padding-right-container: 40px 200px 40px 40px;
 }
 
 .right-container > .info {
-  padding: 20px 40px;
+  padding: var(--padding-right-container);
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .right-container form {
-  padding: 40px 40px;
+  padding: var(--padding-right-container);
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 -2px 10px rgba(0, 0, 0, 0.15);
 }
@@ -102,12 +105,8 @@ form > div {
   margin-right: 60px;
 }
 
-label, .submit-container {
+label {
   display: block;
-}
-
-.submit-container button {
-  margin-bottom: 10px;
 }
 
 /* form styling */
@@ -118,12 +117,11 @@ form label {
   color: rgb(94, 94, 94);
 }
 
-form input, form input:required {
+form input {
   font-size: 1rem;
   padding: 4px;
   border: 1px solid rgb(167, 167, 167);
   border-radius: 5px;
-
 }
 
 form input:focus {
@@ -132,8 +130,13 @@ form input:focus {
   box-shadow: 2px 2px 3px #ccc;
 }
 
+.submit-container {
+  padding: 20px 40px;
+}
+
 .submit-container button {
   width: 200px;
+  margin-bottom: 10px;
   padding: 7px;
   background-color: #e35736;
   border: none;
@@ -148,13 +151,15 @@ form input:focus {
   cursor: pointer;
 }
 
-.submit-container {
-  padding: 20px 40px;
-}
-
 .submit-container button:active {
   color: #e35736;
   background-color: white;
+}
+
+.submit-container a {
+  color: #e35736;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 form input[type="password"]:invalid {
@@ -164,12 +169,6 @@ form input[type="password"]:invalid {
 form p {
   color: rgb(94, 94, 94);
   margin-bottom: 20px;
-}
-
-.submit-container a {
-  color: #e35736;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 input#confirm-password + span,
@@ -211,4 +210,3 @@ input#email + span::before {
   color: rgb(94, 94, 94);
   content: "(Ex: username@domain.com)";
 }
-
