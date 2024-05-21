@@ -176,7 +176,7 @@ form p {
   font-weight: bold;
 }
 
-input#password + span {
+input#password + span, input#phone + span {
   position: relative;
   display: block;
 }
@@ -186,6 +186,16 @@ input#password.invalid + span::before {
   font-size: 0.7rem;
   color: red;
   content: "Passwords do not match";
+  padding: 5px 10px;
+  bottom: -25px;
+  left: -5px;
+}
+
+input#phone + span::before {
+  position: absolute;
+  font-size: 0.7rem;
+  color: rgb(94, 94, 94);
+  content: "(Ex: 12345678912)";
   padding: 5px 10px;
   bottom: -25px;
   left: -5px;
